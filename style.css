@@ -1,0 +1,89 @@
+/*CSS reset default*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+/*Avoid text overflows*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*CSS custom variables*/
+:root {
+  --white-clr: white;
+  --vio-light-clr: #9575DE;
+}
+
+body {
+  background: url(assets/bg-illustration.svg) center / cover no-repeat fixed;
+}
+
+.header-container > div {
+  color: var(--white-clr);
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.header-container {
+  min-height: 10vh;
+  min-width: 100vw;
+}
+
+/*Content Declarations*/
+.content-container {
+  display: flex;
+}
+
+/*left content*/
+.content-container > div {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  min-height: 85vh;
+}
+
+/*Right Content*/
+.content-container > div + div {
+  width: 50vw;
+  min-height: 85vh;
+}
+
+#right-content > div > p:nth-child(1)  {
+  color: var(--vio-light-clr);
+  font-size: 1.5em;
+  text-align: left;
+  max-width: 25rem;
+}
+
+#right-content > div > p:nth-child(2)  {
+  color: var(--white-clr);
+  text-align: left;
+  max-width: 18rem;
+  margin-top: 0.5rem;
+}
+
+
+
+
+
+
