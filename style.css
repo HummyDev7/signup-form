@@ -39,7 +39,6 @@ body {
 }
 
 .header-container > div {
-  color: var(--white-clr);
   padding: 1rem;
   font-size: 2rem;
 }
@@ -76,11 +75,32 @@ body {
 }
 
 #right-content > div > p:nth-child(2)  {
-  color: var(--white-clr);
   text-align: left;
   max-width: 18rem;
   margin-top: 0.5rem;
 }
+
+label {
+  display: block;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#right-content form > div {
+  display: flex;
+  gap: 2.5rem;
+}
+
+#right-content > div #form-content {
+  margin-top: 1.5rem;
+}
+
+#right-content .contents .term-condition{
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  max-width: 24rem;
+}
+
 
 
 
