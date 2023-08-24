@@ -32,6 +32,7 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
   --white-clr: white;
   --vio-light-clr: #9575DE;
+  --vio-dark-clr: #6554AF;
 }
 
 body {
@@ -80,6 +81,7 @@ body {
   margin-top: 0.5rem;
 }
 
+/*We set the label to block because it is inline*/
 label {
   display: block;
   font-family: 'Nunito Sans', sans-serif;
@@ -101,8 +103,37 @@ label {
   max-width: 24rem;
 }
 
+/*Changin the default color to black*/
+label, #right-content .two, .term-condition, .last-text, .header-title {
+  color: var(--white-clr);
+}
 
+span[data-violet] {
+  color: var(--vio-light-clr);
+}
 
+/*Designing the submit button*/
+button {
+  background-color: var(--vio-dark-clr);
+  color: var(--white-clr);
+  padding: 1.5em;
+  border: none;
+  width: 15em;
+  height: 1em;
+  line-height: 25%;
+}
+
+#btm-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--vio-light-clr);
+  position: relative;
+  bottom: 1em;
+}
 
 
 
