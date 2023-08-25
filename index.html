@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Work+Sans&display=swap" rel="stylesheet">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <div class="header-container">
@@ -32,43 +33,44 @@
           <div class="first-row">
             <div>
               <label for="first-name">First Name</label>
-              <input type="text" id="first name" name="user-first-name">
+              <input type="text" id="first name" name="user-first-name" minlength="3" maxlength="35">
             </div>
             <div>
               <label for="last-name">Last Name</label>
-              <input type="text" id="first name" name="user-first-name">
+              <input type="text" id="first name" name="user-first-name" minlength="3" maxlength="35">
             </div>  
           </div>
           <div class="second-row">
             <div>
-              <label for="email">Email</label>
+              <label for="email" data-required>Email</label>
               <input type="email" id="email" name="user-email">
             </div>
             <div>
               <label for="phone-number">Phone Number</label>
-              <input type="text" id="phone-number" name="user-phone-number">
+              <input type="text" id="phone-number" name="user-phone-number" pattern="">
             </div>
           </div>
           <div class="third-row">
             <div>
-              <label for="pass">Password</label>
-              <input type="password" id="pass" name="user-pass">
+              <label for="pass" data-required>Password</label>
+              <input type="password" id="pass" name="user-pass" required>
             </div>
             <div> 
-              <label for="confirm-pass">Confirm Password</label>
-              <input type="password" id="confirm-pass" name="confirm-password">
+              <label for="confirm-pass" data-required>Confirm Password</label>
+              <input type="password" id="confirm-pass" name="confirm-password" required>
+              <div class="confirm-pass-msg"></div>
             </div>
           </div>
           <div class="btm-content">
             <div class="term-condition">  
               <input type="checkbox" name="term-condition-checkbox" id="checkbox">
-              <p>By signing up, you are agreeing to our and <span data-violet>Terms & Conditions</span> and <span>Privacy Policy</span></p>
+              <p>By signing up, you are agreeing to our and <span data-violet><a href="#">Terms & Conditions</a></span> and <span data-violet=""><a href="#">Privacy Polic</a>y</span></p>
             </div>
             <div id="sub-btn">
               <button type="submit" class="submit-btn">Create Account</button>
             </div>
             <div class="last-text">
-              <p>Already have an account? <span data-violet>Log in</span></p>
+              <p>Already have an account? <span data-violet><a href="#">Log in</a></span></p>
             </div>
           </div>
         </form>
@@ -79,5 +81,10 @@
 </html>
 
 
-
-
+<!--TODO-->
+<!--*use JS to create a validation for confirming if the password does match the password-->
+<!--Create an erro message on password input in which detect if the pattern is right-->
+<!--Create a simple error message if the pattern does not match and also other validation-->
+<!--If the creation is successfull and there is no error create a simple web page that says welcome-->
+<!--Use JS to check if the checkbox has be checked if not checked then don't submit it and display an error saying checkbox shall be checked-->
+<!--Style the invalid and valid-->

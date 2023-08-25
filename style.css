@@ -23,6 +23,11 @@ ol, ul {
 	list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*Avoid text overflows*/
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
@@ -33,6 +38,8 @@ p, h1, h2, h3, h4, h5, h6 {
   --white-clr: white;
   --vio-light-clr: #9575DE;
   --vio-dark-clr: #6554AF;
+  --error-clr: #E83F36;
+  --success-clr: #188351;
 }
 
 body {
@@ -47,6 +54,7 @@ body {
 .header-container {
   min-height: 10vh;
   min-width: 100vw;
+  display: flex;
 }
 
 /*Content Declarations*/
@@ -131,7 +139,11 @@ button {
 input[type="checkbox"] {
   accent-color: var(--vio-light-clr);
   position: relative;
-  bottom: 1em;
+  bottom: 0.8rem;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
 }
 
 #right-content  form > div:nth-child(4) {
@@ -157,6 +169,7 @@ input[type="email"] {
     linear-gradient(90deg, #1E1B23, #1E1B23) left bottom/100% 0.15em no-repeat,
     linear-gradient(90deg, #2D2932, #2D2932) left bottom/100% no-repeat;
   transition: background-size 0.3s ease;
+  color: var(--white-clr);
 }
 
 input[type="text"]:focus,
@@ -165,7 +178,15 @@ input[type="email"]:focus {
   background-size: 100% 0.15em, 100% 0.1em, 100%;
 }
 
+label[data-required]::after {
+  content: " *";
+  color: #E83F36;
+}
 
-
-
+/*Validatin if password match style*/
+.error-confirm-pass::after{
+  content: "* Password does not match";
+  color: #E83F36;
+  font-size: 0.8em;
+}
 
