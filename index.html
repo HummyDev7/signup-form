@@ -43,7 +43,7 @@
           <div class="second-row">
             <div>
               <label for="email" data-required>Email</label>
-              <input type="email" id="email" name="user-email">
+              <input type="email" id="email" name="user-email" required>
             </div>
             <div>
               <label for="phone-number">Phone Number</label>
@@ -53,7 +53,12 @@
           <div class="third-row">
             <div>
               <label for="pass" data-required>Password</label>
-              <input type="password" id="pass" name="user-pass" required>
+              <input type="password" id="pass" name="user-pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}$" required>
+              <div class="pass-msg-contents">
+                <div class="error-pass-msg"></div>
+                <div class="error-pass-msg-two"></div>
+                <div class="error-pass-msg-three"></div>
+              </div>
             </div>
             <div> 
               <label for="confirm-pass" data-required>Confirm Password</label>
@@ -83,7 +88,7 @@
 
 <!--TODO-->
 <!--*use JS to create a validation for confirming if the password does match the password-->
-<!--Create an erro message on password input in which detect if the pattern is right-->
+<!--*Create an erro message on password input in which detect if the pattern is right-->
 <!--Create a simple error message if the pattern does not match and also other validation-->
 <!--If the creation is successfull and there is no error create a simple web page that says welcome-->
 <!--Use JS to check if the checkbox has be checked if not checked then don't submit it and display an error saying checkbox shall be checked-->

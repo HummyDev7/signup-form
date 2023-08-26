@@ -190,3 +190,30 @@ label[data-required]::after {
   font-size: 0.8em;
 }
 
+/*Validation for password input*/
+.error-password-char::after {
+  content: "* Use at least 8 characters";
+  color: #E83F36;
+  font-size: 0.8em;
+}
+
+.error-password-num::after {
+  content: "* Use one or more numbers ";
+  color: #E83F36;
+  font-size: 0.8em;
+}
+
+.error-password-case::after {
+  content: "* Use upper and lower case";
+  color: #E83F36;
+  font-size: 0.8em;
+}
+
+.pass-msg-contents > div + div {
+  margin-top: -0.1rem;
+}
+
+.pass-msg-contents > div + div + div {
+  margin-bottom: -1.4rem;
+}
+
