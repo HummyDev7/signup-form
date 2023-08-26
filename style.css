@@ -209,6 +209,12 @@ label[data-required]::after {
   font-size: 0.8em;
 }
 
+.error-phone-msg::after {
+  content: "* Phone number invalid";
+  color: #E83F36;
+  font-size: 0.8em;
+}
+
 .pass-msg-contents > div + div {
   margin-top: -0.1rem;
 }
@@ -217,3 +223,6 @@ label[data-required]::after {
   margin-bottom: -1.4rem;
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
